@@ -10,6 +10,7 @@ gem 'sass-rails', '~> 5'
 gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'redis', '~> 4.0'
+gem 'graphql'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -23,6 +24,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'graphiql-rails'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
