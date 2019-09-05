@@ -22,5 +22,8 @@ module Yunshe
       g.helper          false
       g.channel         assets: false
     end
+
+    # Include fonts so we can use helper method like `font-url('feather/Feather.ttf?sdxovp')`
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end
