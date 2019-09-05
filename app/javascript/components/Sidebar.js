@@ -30,4 +30,8 @@ class Sidebar extends React.Component {
   }
 }
 
+Sidebar.propTypes = {
+  mode: PropTypes.oneOf(['default', 'mini'])
+}
+
 export default Sidebar
