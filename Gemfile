@@ -3,7 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
+gem 'autoprefixer-rails'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'devise'
 gem 'graphql'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
@@ -13,7 +15,6 @@ gem 'redis', '~> 4.0'
 gem 'sass-rails', '~> 5'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
-gem 'autoprefixer-rails'
 
 group :development, :test do
   gem 'pry-byebug'
