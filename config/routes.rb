@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: "pages#home"
-
+  
   # GraphQL API
   if Rails.env.development?
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
@@ -9,5 +8,5 @@ Rails.application.routes.draw do
   post "/graphql", to: "graphql#execute"
   
   # Authentication
-  get "/login", to: "auth#login"
+  devise_for :users
 end
