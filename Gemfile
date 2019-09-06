@@ -13,6 +13,7 @@ gem 'redis', '~> 4.0'
 gem 'sass-rails', '~> 5'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
+gem 'autoprefixer-rails'
 
 group :development, :test do
   gem 'pry-byebug'

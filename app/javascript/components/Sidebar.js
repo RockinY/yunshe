@@ -88,6 +88,83 @@ class Sidebar extends React.Component {
                 </li>
               </ul>
 
+              {/* Divider */}
+              <hr className="navbar-divider my-3" />
+
+              {/* Heading */}
+              <h6 className="navbar-heading">
+                Documentation
+              </h6>
+
+              {/* Navigation */}
+              <ul className="navbar-nav mb-md-4">
+                <li className="nav-item">
+                  <a className="nav-link active" href="getting-started.html">
+                    <i className="fe fe-clipboard"></i> Getting started
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#sidebarComponents" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="sidebarComponents">
+                    <i className="fe fe-book-open"></i> Components
+                  </a>
+                  <div className="collapse show" id="sidebarComponents">
+                    <ul className="nav nav-sm flex-column">
+                      <li className="nav-item">
+                        <a href="components.html#alerts" className="nav-link">
+                          Alerts
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" href="changelog.html">
+                    <i className="fe fe-git-branch"></i> Changelog <span className="badge badge-primary ml-auto">v1.4.2</span>
+                  </a>
+                </li>
+              </ul>
+
+              {/* Push content down */}
+              <div className="mt-auto"></div>
+
+              <div className="navbar-user d-none d-md-flex" id="sidebarUser">
+        
+                {/* Icon */}
+                <a href="#sidebarModalActivity" className="navbar-user-link" data-toggle="modal">
+                  <span className="icon">
+                    <i className="fe fe-bell"></i>
+                  </span>
+                </a>
+
+                {/* Dropup */}
+                <div className="dropup">
+                  
+                  {/* Toggle */}
+                  <a href="#" id="sidebarIconCopy" className="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div className="avatar avatar-sm avatar-online">
+                      <img src={Avatar} className="avatar-img rounded-circle" alt="..." />
+                    </div>
+                  </a>
+
+                  {/* Menu */}
+                  <div className="dropdown-menu" aria-labelledby="sidebarIconCopy">
+                    <a href="profile-posts.html" className="dropdown-item">Profile</a>
+                    <a href="settings.html" className="dropdown-item">Settings</a>
+                    <hr className="dropdown-divider" />
+                    <a href="sign-in.html" className="dropdown-item">Logout</a>
+                  </div>
+
+                </div>
+
+                {/* Icon */}
+                <a href="#sidebarModalSearch" className="navbar-user-link" data-toggle="modal">
+                  <span className="icon">
+                    <i className="fe fe-search"></i>
+                  </span>
+                </a>
+
+              </div>
+
             </div>
 
           </div>
