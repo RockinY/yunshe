@@ -31,32 +31,14 @@
             <div class="col">
               <label>Password</label>
             </div>
-            <div class="col-auto">
-              <%= link_to "Forgot password?", new_user_password_path, class: "form-text small text-muted" %>
-            </div>
           </div>
           <div class="input-group input-group-merge">
             <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "Enter your password" %>
           </div>
         </div>
 
-        <% if devise_mapping.rememberable? %>
-          <div class="row">
-            <div class="col">
-              <%= f.check_box :remember_me %>
-              <%= f.label :remember_me %>
-            </div>
-          </div>
-        <% end %>
         <!-- Submit -->
         <%= f.submit "Sign in", class: "btn btn-lg btn-block btn-primary mb-3" %>
-
-        <!-- Link -->
-        <div class="text-center">
-          <small class="text-muted text-center">
-            Don't have an account yet? <%= link_to "Sign up", new_user_registration_path %>.
-          </small>
-        </div>
 
       <% end %>
 
