@@ -10,15 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_11_122629) do
+ActiveRecord::Schema.define(version: 2019_09_11_134613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "clients", force: :cascade do |t|
-    t.string "name"
+  create_table "campaigns", force: :cascade do |t|
+    t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "client_id"
+    t.index ["client_id"], name: "index_campaigns_on_client_id"
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tracks", force: :cascade do |t|
+    t.string "url", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "campaign_id"
+    t.bigint "client_id"
+    t.index ["campaign_id"], name: "index_tracks_on_campaign_id"
+    t.index ["client_id"], name: "index_tracks_on_client_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -28,6 +46,12 @@ ActiveRecord::Schema.define(version: 2019_09_11_122629) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
+  end
+
+  create_table "vendors", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "versions", force: :cascade do |t|
