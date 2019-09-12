@@ -1,5 +1,5 @@
 {
-  "name": "yunshe",
+  "name": "admetric",
   "private": true,
   "dependencies": {
     "@babel/preset-react": "^7.0.0",
