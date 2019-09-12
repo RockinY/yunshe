@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   
   # Authentication
   devise_for :users, path: 'auth', path_names: { sign_in: 'login', sign_out: 'logout' }
+  
+  # Pages
+  resources :clients, only: [:index]
+  resources :vendors, only: [:index]
 end
