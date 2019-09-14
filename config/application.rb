@@ -23,7 +23,6 @@ module App
       g.channel         assets: false
     end
 
-    # Include fonts so we can use helper method like `font-url('feather/Feather.ttf?sdxovp')`
-    config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.assets.paths << Rails.root.join("vendor", "assets")
   end
 end
