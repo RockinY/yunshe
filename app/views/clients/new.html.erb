@@ -24,25 +24,22 @@
       </div>
 
       <!-- Form -->
-      <form class="mb-4">
+      <%= form_with model: @client, class: "mb-4" do |f| %>
 
         <!-- Client name -->
         <div class="form-group">
           <label>
             Client name
           </label>
-          <input type="text" class="form-control">
+          <%= f.text_field :name, class: "form-control" %>
         </div>
 
         <!-- Divider -->
         <hr class="mt-5 mb-5">
 
-        <!-- Buttons -->
-        <a href="#" class="btn btn-block btn-primary">
-          Create project
-        </a>
-
-      </form>
+        <!-- Submit -->
+        <%= f.submit "Create Client", class: "btn btn-primary lift" %>
+      <% end %>
 
     </div>
   </div>
