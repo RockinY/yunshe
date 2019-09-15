@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_self
+ *= require keen/custom/fullcalendar/fullcalendar.bundle.css
  *= require keen/global/vendors.bundle.css
  *= require keen/css/style.bundle.css
  *= require keen/css/skins/header/base/light.css
