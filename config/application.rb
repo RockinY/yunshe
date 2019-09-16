@@ -24,5 +24,6 @@ module App
     end
 
     config.assets.paths << Rails.root.join("vendor", "assets")
+    config.assets.precompile += %w( devise.css )
   end
 end

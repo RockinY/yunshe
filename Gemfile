@@ -3,7 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
-gem 'autoprefixer-rails'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
 gem 'graphql'

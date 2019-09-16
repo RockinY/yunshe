@@ -6,34 +6,6 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        "families": ["Poppins:300,400,500,600,700"]
-      },
-      active: function () {
-        sessionStorage.fonts = true;
-      }
-    });
-  </script>
-
-  <link rel="shortcut icon" href="/favicon.ico" />
-</head>
-
-<body>
-  <%= render "shared/sidebar" %>
-  <div class="main-content">
-    <%= yield %>
-  </div>
-
   <script>
     var KTAppOptions = {
       "colors": {
@@ -66,6 +38,35 @@
       }
     };
   </script>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        "families": ["Poppins:300,400,500,600,700"]
+      },
+      active: function () {
+        sessionStorage.fonts = true;
+      }
+    });
+  </script>
+
+  <link rel="shortcut icon" href="/favicon.ico" />
+</head>
+
+<body>
+  <%= render "shared/sidebar" %>
+  <div class="main-content">
+    <%= yield %>
+  </div>
 </body>
 
 </html>
