@@ -40,7 +40,6 @@
   </script>
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   <meta charset="utf-8">
@@ -92,6 +91,8 @@
   <%= render "shared/keen/layout-quick-panel" %>
   <%= render "shared/keen/layout-scrolltop" %>
   <%= render "shared/keen/layout-toolbar" %>
+
+  <%= javascript_include_tag 'application' %>
 </body>
 
 </html>
