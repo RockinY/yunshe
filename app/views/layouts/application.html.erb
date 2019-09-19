@@ -61,7 +61,7 @@
   <link rel="shortcut icon" href="/favicon.ico" />
 </head>
 
-<body class="kt-page--loading-enabled kt-page--loading kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-aside--enabled kt-aside--fixed kt-page--loading">
+<body class="kt-page--loading-enabled kt-page--loading kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
   <%= render "shared/keen/layout-page-loader" %>
   <%= render "shared/keen/header-base-mobile" %>
   <!-- begin:: Root -->
@@ -73,10 +73,7 @@
           <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
               <%= render "shared/keen/header-base" %>
               <div class="kt-content kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-                  <%= render "shared/keen/subheader-subheader-v1" %>
-                  <div class="kt-container kt-container--fluid kt-grid__item kt-grid__item--fluid">
-                    <%= yield %>
-                  </div>
+                  <%= yield %>
               </div>
               <%= render "shared/keen/footer-base" %>
           </div>

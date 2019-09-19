@@ -1,1 +1,16 @@
-clients index page
+<%= render partial: "subheader" %>
+<div class="kt-container kt-container--fluid kt-grid__item kt-grid__item--fluid">
+  <div class="kt-portlet">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#ID</th>
+          <th scope="col">Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "client", collection: @clients %>
+      </tbody>
+    </table>
+  </div>
+</div>
