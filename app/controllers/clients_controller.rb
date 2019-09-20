@@ -15,7 +15,7 @@ class ClientsController < ApplicationController
   def create
     client = Client.new(client_params)
     if client.save!
-      redirect_to action: :show, notice: "Client #{client.name} created!"
+      redirect_to client_path(client), notice: "Client #{client.name} created!"
     else
       flash[:alert] = "Error!"
       render :new
@@ -25,6 +25,6 @@ class ClientsController < ApplicationController
   private
 
   def client_params
-    params.require(:client).permit!(:name)
+    params.require(:client).permit(:name)
   end
 end

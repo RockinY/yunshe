@@ -1,0 +1,53 @@
+<!-- begin:: Subheader -->
+<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+  <div class="kt-container  kt-container--fluid ">
+    <div class="kt-subheader__main">
+
+      <h3 class="kt-subheader__title">
+        New Client
+      </h3>
+
+
+      <span class="kt-subheader__separator kt-subheader__separator--v"></span>
+
+      <div class="kt-subheader__toolbar" id="kt_subheader_search">
+        <span class="kt-subheader__desc" id="kt_subheader_total">Enter client information and submit </span>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<!-- end:: Subheader -->
+
+<!-- begin: Content -->
+<div class="kt-container kt-container--fluid kt-grid__item kt-grid__item--fluid">
+  <div class="kt-portlet">
+    <div class="kt-portlet__body">
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <!-- begin: Form -->
+        <div class="col-lg-8">
+          <%= form_with model: @client, class: "kt-form", local: true do |f| %>
+            <div class="kt-heading kt-heading--md">Create New Client</div>
+            <div class="kt-separator kt-separator--height-xs"></div>
+
+            <div class="kt-form__section kt-form__section--first">
+              <div class="form-group">
+                <label>Name:</label>
+                <%= f.text_field :name, class: "form-control", placeholder: "Enter client name" %>
+              </div>
+
+              <div class="form-group">
+                <%= f.submit "Save", class: "btn btn-label-brand btn-bold" %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <!-- end: Form -->
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end: Content -->
